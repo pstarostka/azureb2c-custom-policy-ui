@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@azure-b2c-custom-policy-ui/xml-parser": ["libs/xml-parser/src/index.ts"]
+      "@azure-b2c-custom-policy-ui/xml-parser": ["libs/xml-parser/src/index.ts"],
+      "@azure-b2c-custom-policy-ui/xml-parser/types": ["libs/xml-parser/src/lib/types/index.d.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
