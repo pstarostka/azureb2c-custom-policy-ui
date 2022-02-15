@@ -1,8 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "b2c-parser": "libs/b2c-parser",
     "client-app": "apps/client-app",
-    "client-app-e2e": "apps/client-app-e2e",
-    "xml-parser": "libs/xml-parser"
+    "client-app-e2e": "apps/client-app-e2e"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "root": "libs/b2c-parser",
+  "sourceRoot": "libs/b2c-parser/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/b2c-parser/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/b2c-parser"],
+      "options": {
+        "jestConfig": "libs/b2c-parser/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

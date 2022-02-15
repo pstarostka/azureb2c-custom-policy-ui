@@ -1,12 +1,17 @@
-import styled from 'styled-components';
+import { getDefaultTrustFrameworkBase } from '@azure-b2c-custom-policy-ui/b2c-parser';
+import { Button, Layout, Menu } from 'antd';
+import 'antd/dist/antd.less';
 import { XMLBuilder, XMLParser } from 'fast-xml-parser';
 import { useEffect } from 'react';
-import Home from './home';
+import styled from 'styled-components';
+import XmlViewer from './xml-viewer';
 
-const StyledApp = styled.div`
-  // Your style here
+const { Header, Footer, Sider, Content } = Layout;
+const Logo = styled.img`
+  float: left;
+  height: 50px;
+  margin: 7px;
 `;
-
 export function App() {
   const options = {
     ignoreAttributes: false,
@@ -49,11 +54,29 @@ export function App() {
     console.log(b);
     console.log('xml', xmlContent);
   }, []);
-
+  const elo = () => {
+    getDefaultTrustFrameworkBase();
+    console.log('elo');
+  };
   return (
-    <StyledApp>
-      <Home obj={b.TechnicalProfile} />
-    </StyledApp>
+    <Layout>
+      <Header>
+        <Logo src="../assets/b2c-logo.png" alt="logo" />
+        <Menu theme="dark" mode="horizontal">
+          {['Home', 'Test'].map((item, index) => {
+            const key = index + 1;
+            return <Menu.Item key={key}>{item}</Menu.Item>;
+          })}
+        </Menu>
+      </Header>
+      <Content style={{ margin: '10px' }}>
+        <XmlViewer />
+        <Button type="primary" onClick={elo}>
+          Primary Button
+        </Button>
+      </Content>
+      <Footer>Footer</Footer>
+    </Layout>
   );
 }
 
