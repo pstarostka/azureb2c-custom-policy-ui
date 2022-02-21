@@ -3,7 +3,17 @@ import { XmlRoot } from './interfaces/base-profile';
 import { trustFrameworkBase } from './starter-files/trustFrameworkBase';
 
 export const getDefaultTrustFrameworkBase = () => {
-  const xmlParser = new XMLParser();
+  const options = {
+    ignoreAttributes: false,
+    attributeNamePrefix: '',
+    attributesGroupName: '_attributes',
+    alwaysCreateTextNode: true,
+    commentPropName: '_comment',
+    parseAttributeValue: true,
+    allowBooleanAttributes: true,
+    textNodeName: 'value',
+  };
+  const xmlParser = new XMLParser(options);
 
   return xmlParser.parse(trustFrameworkBase) as XmlRoot;
 };

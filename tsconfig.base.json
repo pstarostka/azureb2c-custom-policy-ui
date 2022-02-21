@@ -18,8 +18,11 @@
       "@azure-b2c-custom-policy-ui/b2c-parser": [
         "libs/b2c-parser/src/index.ts"
       ],
+      "@azure-b2c-custom-policy-ui/b2c-parser/components": [
+        "libs/b2c-parser/src/components/index.ts"
+      ],
       "@azure-b2c-custom-policy-ui/b2c-parser/interfaces": [
-        "libs/b2c-parser/src/lib/interfaces/index.ts"
+        "libs/b2c-parser/src/interfaces/index.ts"
       ]
     }
   },

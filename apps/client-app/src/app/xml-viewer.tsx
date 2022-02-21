@@ -1,4 +1,5 @@
 import { getDefaultTrustFrameworkBase } from '@azure-b2c-custom-policy-ui/b2c-parser';
+import { ClaimTypeDisplay } from '@azure-b2c-custom-policy-ui/b2c-parser/components';
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
@@ -12,7 +13,7 @@ export function XmlViewer(props: XmlViewerProps) {
       <div>Claims</div>
       {a.TrustFrameworkPolicy.BuildingBlocks.ClaimsSchema.ClaimType.map(
         (x, index) => {
-          return <div key={index}> {JSON.stringify(x, null, 2)}</div>;
+          return <ClaimTypeDisplay key={index} {...x} />;
         }
       )}
     </StyledXmlViewer>

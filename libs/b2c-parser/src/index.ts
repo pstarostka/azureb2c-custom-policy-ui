@@ -1,3 +1,1 @@
-import { getDefaultTrustFrameworkBase } from './xml-parser';
-
-export { getDefaultTrustFrameworkBase };
+export * from './xml-parser';
