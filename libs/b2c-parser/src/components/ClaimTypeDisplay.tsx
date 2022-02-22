@@ -17,5 +17,3 @@ export function ClaimTypeDisplay(prop: ClaimType) {
     </StyledClaim>
   );
 }
-
-export default ClaimTypeDisplay;

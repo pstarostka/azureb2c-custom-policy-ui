@@ -14,6 +14,6 @@ export const getDefaultTrustFrameworkBase = () => {
     textNodeName: 'value',
   };
   const xmlParser = new XMLParser(options);
-
+  console.log(xmlParser.parse(trustFrameworkBase));
   return xmlParser.parse(trustFrameworkBase) as XmlRoot;
 };
