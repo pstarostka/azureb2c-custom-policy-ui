@@ -1,3 +1,4 @@
+import React from 'react';
 import { getDefaultTrustFrameworkBase } from 'src/xml-parser';
 import { ClaimTypeDisplay } from './ClaimTypeDisplay';
 
@@ -5,7 +6,7 @@ import { ClaimTypeDisplay } from './ClaimTypeDisplay';
 export interface XmlViewerProps {}
 
 const a = getDefaultTrustFrameworkBase();
-export function XmlViewer(props: XmlViewerProps) {
+export const XmlViewer: React.FC<XmlViewerProps> = (props: XmlViewerProps) => {
   return (
     <>
       <div>Claims</div>
@@ -16,6 +17,6 @@ export function XmlViewer(props: XmlViewerProps) {
       )}
     </>
   );
-}
+};
 
 export default XmlViewer;

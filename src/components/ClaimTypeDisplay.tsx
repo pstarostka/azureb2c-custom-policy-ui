@@ -1,7 +1,8 @@
 import { Label, Stack } from '@fluentui/react';
-import { ClaimType } from '../interfaces/building-blocks/claims-schema';
+import React from 'react';
+import { ClaimType } from '../interfaces/building-blocks';
 
-export function ClaimTypeDisplay(prop: ClaimType) {
+export const ClaimTypeDisplay: React.FC<ClaimType> = (prop: ClaimType) => {
   return (
     <>
       <Stack>
@@ -13,4 +14,4 @@ export function ClaimTypeDisplay(prop: ClaimType) {
       {/* {JSON.stringify(prop, null, 2)} */}
     </>
   );
-}
+};

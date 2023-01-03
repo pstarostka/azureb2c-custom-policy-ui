@@ -68,6 +68,7 @@ export const trustFrameworkBase: string = `<?xml version="1.0" encoding="UTF-8" 
         <UserInputType>TextBox</UserInputType>
       </ClaimType>
 
+
       <ClaimType Id="signInNames.emailAddress">
         <DisplayName>Email Address</DisplayName>
         <DataType>string</DataType>

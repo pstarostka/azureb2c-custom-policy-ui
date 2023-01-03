@@ -1,4 +1,4 @@
-import { BuildingBlock } from "./building-blocks/building-blocks";
+import { BuildingBlocks } from './building-blocks/building-blocks.interface';
 
 export interface XmlRoot {
   '?xml': XmlHead;
@@ -24,7 +24,7 @@ export interface TrustFrameworkPolicy {
     PublicPolicyUri: string;
   };
   BasePolicy?: any;
-  BuildingBlocks: BuildingBlock;
+  BuildingBlocks: BuildingBlocks;
   ClaimsProvider: any;
   UserJourneys: any;
 }

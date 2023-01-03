@@ -1,3 +1,1 @@
-import { TechnicalProfile } from "./technical-profile";
-
-export { TechnicalProfile };
+export * from './technical-profile.interface';
